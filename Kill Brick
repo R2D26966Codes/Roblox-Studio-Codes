@@ -1,0 +1,15 @@
+--creator TVMan14812--
+
+
+
+--code--
+local health		=		0
+
+local function PlayerTouched(Part)
+	local Parent = Part.Parent
+	if game.Players:GetPlayerFromCharacter(Parent) then
+		Parent.Humanoid.Health = health
+	end
+end
+
+script.Parent.Touched:connect(PlayerTouched)
